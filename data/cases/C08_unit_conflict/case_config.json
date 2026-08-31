@@ -1,0 +1,8 @@
+{
+  "unit_conflicts": [
+    {
+      "metric": "resonant_frequency",
+      "reason": "measurements.json lists both 2.40 GHz and 5000 MHz (5 GHz) for resonance"
+    }
+  ]
+}

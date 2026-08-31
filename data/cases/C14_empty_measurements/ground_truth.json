@@ -1,0 +1,35 @@
+{
+  "case_id": "C14",
+  "overall_verdict": "INSUFFICIENT_EVIDENCE",
+  "metrics": [
+    {
+      "metric": "resonant_frequency",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "required": "2.35–2.45 GHz",
+      "measured": null,
+      "reason": "No frequency evidence."
+    },
+    {
+      "metric": "bandwidth",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "required": "≥100 MHz",
+      "measured": null,
+      "reason": "No bandwidth evidence."
+    },
+    {
+      "metric": "peak_gain",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "required": "≥5.0 dBi",
+      "measured": null,
+      "reason": "No gain evidence."
+    },
+    {
+      "metric": "minimum_s11",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "required": "≤-10.0 dB",
+      "measured": null,
+      "reason": "No S11 evidence."
+    }
+  ],
+  "notes": "One or more mandatory metrics lack sufficient evidence"
+}

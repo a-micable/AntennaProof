@@ -1,0 +1,35 @@
+{
+  "case_id": "H02",
+  "overall_verdict": "FAIL",
+  "metrics": [
+    {
+      "metric": "resonant_frequency",
+      "status": "PASS",
+      "required": "2.35–2.45 GHz",
+      "measured": 2.39,
+      "reason": ""
+    },
+    {
+      "metric": "bandwidth",
+      "status": "FAIL",
+      "required": "≥100 MHz",
+      "measured": 60.00000000000006,
+      "reason": "60.00000000000006 MHz below minimum 100 MHz"
+    },
+    {
+      "metric": "peak_gain",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "required": "≥5.0 dBi",
+      "measured": null,
+      "reason": "No gain evidence."
+    },
+    {
+      "metric": "minimum_s11",
+      "status": "PASS",
+      "required": "≤-10.0 dB",
+      "measured": -18.0,
+      "reason": ""
+    }
+  ],
+  "notes": "One or more mandatory metrics failed thresholds"
+}

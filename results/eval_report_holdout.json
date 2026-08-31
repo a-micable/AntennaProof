@@ -1,0 +1,368 @@
+{
+  "baseline": {
+    "system": "baseline",
+    "total_cases": 18,
+    "correct_verdict_rate": 0.6666666666666666,
+    "mean_metric_accuracy": 0.8888888888888888,
+    "false_pass_count": 3,
+    "unsupported_claims_total": 62,
+    "per_case": [
+      {
+        "case_id": "C01",
+        "predicted_verdict": "PASS",
+        "ground_truth_verdict": "PASS",
+        "verdict_correct": true,
+        "metric_accuracy": 1.0,
+        "unsupported_claims": 4,
+        "false_pass": false
+      },
+      {
+        "case_id": "C02",
+        "predicted_verdict": "PASS",
+        "ground_truth_verdict": "PASS",
+        "verdict_correct": true,
+        "metric_accuracy": 1.0,
+        "unsupported_claims": 4,
+        "false_pass": false
+      },
+      {
+        "case_id": "C03",
+        "predicted_verdict": "FAIL",
+        "ground_truth_verdict": "FAIL",
+        "verdict_correct": true,
+        "metric_accuracy": 1.0,
+        "unsupported_claims": 4,
+        "false_pass": false
+      },
+      {
+        "case_id": "C04",
+        "predicted_verdict": "FAIL",
+        "ground_truth_verdict": "FAIL",
+        "verdict_correct": true,
+        "metric_accuracy": 1.0,
+        "unsupported_claims": 4,
+        "false_pass": false
+      },
+      {
+        "case_id": "C05",
+        "predicted_verdict": "INSUFFICIENT_EVIDENCE",
+        "ground_truth_verdict": "INSUFFICIENT_EVIDENCE",
+        "verdict_correct": true,
+        "metric_accuracy": 1.0,
+        "unsupported_claims": 4,
+        "false_pass": false
+      },
+      {
+        "case_id": "C06",
+        "predicted_verdict": "FAIL",
+        "ground_truth_verdict": "INSUFFICIENT_EVIDENCE",
+        "verdict_correct": false,
+        "metric_accuracy": 0.75,
+        "unsupported_claims": 4,
+        "false_pass": false
+      },
+      {
+        "case_id": "C07",
+        "predicted_verdict": "PASS",
+        "ground_truth_verdict": "PASS",
+        "verdict_correct": true,
+        "metric_accuracy": 1.0,
+        "unsupported_claims": 4,
+        "false_pass": false
+      },
+      {
+        "case_id": "C08",
+        "predicted_verdict": "FAIL",
+        "ground_truth_verdict": "INSUFFICIENT_EVIDENCE",
+        "verdict_correct": false,
+        "metric_accuracy": 0.75,
+        "unsupported_claims": 4,
+        "false_pass": false
+      },
+      {
+        "case_id": "C09",
+        "predicted_verdict": "PASS",
+        "ground_truth_verdict": "FAIL",
+        "verdict_correct": false,
+        "metric_accuracy": 0.75,
+        "unsupported_claims": 2,
+        "false_pass": true
+      },
+      {
+        "case_id": "C10",
+        "predicted_verdict": "FAIL",
+        "ground_truth_verdict": "FAIL",
+        "verdict_correct": true,
+        "metric_accuracy": 1.0,
+        "unsupported_claims": 4,
+        "false_pass": false
+      },
+      {
+        "case_id": "C11",
+        "predicted_verdict": "PASS",
+        "ground_truth_verdict": "PASS",
+        "verdict_correct": true,
+        "metric_accuracy": 1.0,
+        "unsupported_claims": 4,
+        "false_pass": false
+      },
+      {
+        "case_id": "C12",
+        "predicted_verdict": "FAIL",
+        "ground_truth_verdict": "FAIL",
+        "verdict_correct": true,
+        "metric_accuracy": 1.0,
+        "unsupported_claims": 4,
+        "false_pass": false
+      },
+      {
+        "case_id": "C13",
+        "predicted_verdict": "PASS",
+        "ground_truth_verdict": "INSUFFICIENT_EVIDENCE",
+        "verdict_correct": false,
+        "metric_accuracy": 0.75,
+        "unsupported_claims": 4,
+        "false_pass": true
+      },
+      {
+        "case_id": "C14",
+        "predicted_verdict": "INSUFFICIENT_EVIDENCE",
+        "ground_truth_verdict": "INSUFFICIENT_EVIDENCE",
+        "verdict_correct": true,
+        "metric_accuracy": 1.0,
+        "unsupported_claims": 0,
+        "false_pass": false
+      },
+      {
+        "case_id": "C15",
+        "predicted_verdict": "FAIL",
+        "ground_truth_verdict": "FAIL",
+        "verdict_correct": true,
+        "metric_accuracy": 1.0,
+        "unsupported_claims": 4,
+        "false_pass": false
+      },
+      {
+        "case_id": "H01",
+        "predicted_verdict": "PASS",
+        "ground_truth_verdict": "INSUFFICIENT_EVIDENCE",
+        "verdict_correct": false,
+        "metric_accuracy": 0.75,
+        "unsupported_claims": 4,
+        "false_pass": true
+      },
+      {
+        "case_id": "H02",
+        "predicted_verdict": "INSUFFICIENT_EVIDENCE",
+        "ground_truth_verdict": "FAIL",
+        "verdict_correct": false,
+        "metric_accuracy": 0.25,
+        "unsupported_claims": 0,
+        "false_pass": false
+      },
+      {
+        "case_id": "H03",
+        "predicted_verdict": "FAIL",
+        "ground_truth_verdict": "FAIL",
+        "verdict_correct": true,
+        "metric_accuracy": 1.0,
+        "unsupported_claims": 4,
+        "false_pass": false
+      }
+    ]
+  },
+  "agentic": {
+    "system": "agentic",
+    "total_cases": 18,
+    "correct_verdict_rate": 1.0,
+    "mean_metric_accuracy": 0.9611111111111111,
+    "false_pass_count": 0,
+    "unsupported_claims_total": 0,
+    "per_case": [
+      {
+        "case_id": "C01",
+        "predicted_verdict": "PASS",
+        "ground_truth_verdict": "PASS",
+        "verdict_correct": true,
+        "metric_accuracy": 1.0,
+        "unsupported_claims": 0,
+        "false_pass": false
+      },
+      {
+        "case_id": "C02",
+        "predicted_verdict": "PASS",
+        "ground_truth_verdict": "PASS",
+        "verdict_correct": true,
+        "metric_accuracy": 1.0,
+        "unsupported_claims": 0,
+        "false_pass": false
+      },
+      {
+        "case_id": "C03",
+        "predicted_verdict": "FAIL",
+        "ground_truth_verdict": "FAIL",
+        "verdict_correct": true,
+        "metric_accuracy": 1.0,
+        "unsupported_claims": 0,
+        "false_pass": false
+      },
+      {
+        "case_id": "C04",
+        "predicted_verdict": "FAIL",
+        "ground_truth_verdict": "FAIL",
+        "verdict_correct": true,
+        "metric_accuracy": 1.0,
+        "unsupported_claims": 0,
+        "false_pass": false
+      },
+      {
+        "case_id": "C05",
+        "predicted_verdict": "INSUFFICIENT_EVIDENCE",
+        "ground_truth_verdict": "INSUFFICIENT_EVIDENCE",
+        "verdict_correct": true,
+        "metric_accuracy": 0.8,
+        "unsupported_claims": 0,
+        "false_pass": false
+      },
+      {
+        "case_id": "C06",
+        "predicted_verdict": "INSUFFICIENT_EVIDENCE",
+        "ground_truth_verdict": "INSUFFICIENT_EVIDENCE",
+        "verdict_correct": true,
+        "metric_accuracy": 0.75,
+        "unsupported_claims": 0,
+        "false_pass": false
+      },
+      {
+        "case_id": "C07",
+        "predicted_verdict": "PASS",
+        "ground_truth_verdict": "PASS",
+        "verdict_correct": true,
+        "metric_accuracy": 1.0,
+        "unsupported_claims": 0,
+        "false_pass": false
+      },
+      {
+        "case_id": "C08",
+        "predicted_verdict": "INSUFFICIENT_EVIDENCE",
+        "ground_truth_verdict": "INSUFFICIENT_EVIDENCE",
+        "verdict_correct": true,
+        "metric_accuracy": 1.0,
+        "unsupported_claims": 0,
+        "false_pass": false
+      },
+      {
+        "case_id": "C09",
+        "predicted_verdict": "FAIL",
+        "ground_truth_verdict": "FAIL",
+        "verdict_correct": true,
+        "metric_accuracy": 1.0,
+        "unsupported_claims": 0,
+        "false_pass": false
+      },
+      {
+        "case_id": "C10",
+        "predicted_verdict": "FAIL",
+        "ground_truth_verdict": "FAIL",
+        "verdict_correct": true,
+        "metric_accuracy": 1.0,
+        "unsupported_claims": 0,
+        "false_pass": false
+      },
+      {
+        "case_id": "C11",
+        "predicted_verdict": "PASS",
+        "ground_truth_verdict": "PASS",
+        "verdict_correct": true,
+        "metric_accuracy": 1.0,
+        "unsupported_claims": 0,
+        "false_pass": false
+      },
+      {
+        "case_id": "C12",
+        "predicted_verdict": "FAIL",
+        "ground_truth_verdict": "FAIL",
+        "verdict_correct": true,
+        "metric_accuracy": 1.0,
+        "unsupported_claims": 0,
+        "false_pass": false
+      },
+      {
+        "case_id": "C13",
+        "predicted_verdict": "INSUFFICIENT_EVIDENCE",
+        "ground_truth_verdict": "INSUFFICIENT_EVIDENCE",
+        "verdict_correct": true,
+        "metric_accuracy": 0.75,
+        "unsupported_claims": 0,
+        "false_pass": false
+      },
+      {
+        "case_id": "C14",
+        "predicted_verdict": "INSUFFICIENT_EVIDENCE",
+        "ground_truth_verdict": "INSUFFICIENT_EVIDENCE",
+        "verdict_correct": true,
+        "metric_accuracy": 1.0,
+        "unsupported_claims": 0,
+        "false_pass": false
+      },
+      {
+        "case_id": "C15",
+        "predicted_verdict": "FAIL",
+        "ground_truth_verdict": "FAIL",
+        "verdict_correct": true,
+        "metric_accuracy": 1.0,
+        "unsupported_claims": 0,
+        "false_pass": false
+      },
+      {
+        "case_id": "H01",
+        "predicted_verdict": "INSUFFICIENT_EVIDENCE",
+        "ground_truth_verdict": "INSUFFICIENT_EVIDENCE",
+        "verdict_correct": true,
+        "metric_accuracy": 1.0,
+        "unsupported_claims": 0,
+        "false_pass": false
+      },
+      {
+        "case_id": "H02",
+        "predicted_verdict": "FAIL",
+        "ground_truth_verdict": "FAIL",
+        "verdict_correct": true,
+        "metric_accuracy": 1.0,
+        "unsupported_claims": 0,
+        "false_pass": false
+      },
+      {
+        "case_id": "H03",
+        "predicted_verdict": "FAIL",
+        "ground_truth_verdict": "FAIL",
+        "verdict_correct": true,
+        "metric_accuracy": 1.0,
+        "unsupported_claims": 0,
+        "false_pass": false
+      }
+    ]
+  },
+  "comparison": {
+    "correct_verdict_rate": {
+      "baseline": 0.6666666666666666,
+      "agentic": 1.0,
+      "change": 0.33333333333333337
+    },
+    "false_pass_count": {
+      "baseline": 3,
+      "agentic": 0,
+      "change": -3
+    },
+    "unsupported_claims_total": {
+      "baseline": 62,
+      "agentic": 0,
+      "change": -62
+    },
+    "mean_metric_accuracy": {
+      "baseline": 0.8888888888888888,
+      "agentic": 0.9611111111111111,
+      "change": 0.0722222222222223
+    }
+  }
+}

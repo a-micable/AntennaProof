@@ -1,0 +1,35 @@
+{
+  "case_id": "C04",
+  "overall_verdict": "FAIL",
+  "metrics": [
+    {
+      "metric": "resonant_frequency",
+      "status": "FAIL",
+      "required": "2.35–2.45 GHz",
+      "measured": 2.1,
+      "reason": "Outside required band."
+    },
+    {
+      "metric": "bandwidth",
+      "status": "PASS",
+      "required": "≥100 MHz",
+      "measured": 150.0,
+      "reason": ""
+    },
+    {
+      "metric": "peak_gain",
+      "status": "PASS",
+      "required": "≥5.0 dBi",
+      "measured": 6.0,
+      "reason": ""
+    },
+    {
+      "metric": "minimum_s11",
+      "status": "PASS",
+      "required": "≤-10.0 dB",
+      "measured": -20.0,
+      "reason": ""
+    }
+  ],
+  "notes": "One or more mandatory metrics failed thresholds"
+}

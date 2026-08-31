@@ -1,0 +1,6 @@
+{
+  "resonant_frequency_mhz": 2390,
+  "bandwidth_mhz": 108,
+  "peak_gain_dbi": 5.4,
+  "min_s11_db": -14.5
+}

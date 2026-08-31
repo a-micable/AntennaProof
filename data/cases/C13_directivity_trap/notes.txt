@@ -1,0 +1,1 @@
+Report lists peak directivity of 6.5 dBi. Gain not exported from simulation.

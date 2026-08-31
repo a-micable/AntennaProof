@@ -1,0 +1,14 @@
+{
+  "case_id": "C01",
+  "design_name": "2.4 GHz Patch Reference",
+  "description": "Clean pass — all mandatory metrics met.",
+  "mandatory_metrics": ["resonant_frequency", "bandwidth", "peak_gain", "minimum_s11"],
+  "optional_metrics": ["efficiency"],
+  "criteria": {
+    "resonant_frequency": {"min_ghz": 2.35, "max_ghz": 2.45},
+    "bandwidth": {"min_mhz": 100},
+    "peak_gain": {"min_dbi": 5.0},
+    "minimum_s11": {"max_db": -10.0},
+    "efficiency": {"min_percent": 70.0}
+  }
+}

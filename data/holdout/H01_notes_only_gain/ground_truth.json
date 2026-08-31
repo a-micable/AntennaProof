@@ -1,0 +1,35 @@
+{
+  "case_id": "H01",
+  "overall_verdict": "INSUFFICIENT_EVIDENCE",
+  "metrics": [
+    {
+      "metric": "resonant_frequency",
+      "status": "PASS",
+      "measured": 2.39,
+      "required": "2.35–2.45 GHz",
+      "reason": ""
+    },
+    {
+      "metric": "bandwidth",
+      "status": "PASS",
+      "measured": 110.0,
+      "required": "≥100 MHz",
+      "reason": ""
+    },
+    {
+      "metric": "peak_gain",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "measured": null,
+      "required": "≥5.0 dBi",
+      "reason": "Gain only in notes — not admissible for PASS without measurements.json peak_gain"
+    },
+    {
+      "metric": "minimum_s11",
+      "status": "PASS",
+      "measured": -15.0,
+      "required": "≤-10.0 dB",
+      "reason": ""
+    }
+  ],
+  "notes": "Holdout: notes-only gain must not yield PASS"
+}

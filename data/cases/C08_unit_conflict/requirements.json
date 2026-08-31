@@ -1,0 +1,11 @@
+{
+  "design_id": "C08",
+  "title": "Conflicting Frequency Units",
+  "mandatory_metrics": ["resonant_frequency", "bandwidth", "peak_gain", "min_s11"],
+  "criteria": {
+    "resonant_frequency": {"min_ghz": 2.35, "max_ghz": 2.45},
+    "bandwidth": {"min_mhz": 100},
+    "peak_gain": {"min_dbi": 5.0},
+    "min_s11": {"max_db": -10.0}
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "overall_verdict": "INSUFFICIENT_EVIDENCE",
+  "metric_results": [
+    {
+      "metric": "resonant_frequency",
+      "required": "2.35–2.45 GHz",
+      "measured": null,
+      "status": "INSUFFICIENT_EVIDENCE",
+      "evidence_id": "E01",
+      "reason": "Conflicting frequency values across sources."
+    },
+    {
+      "metric": "bandwidth",
+      "required": "≥100.0 MHz",
+      "measured": "120.0 MHz",
+      "status": "PASS",
+      "evidence_id": "E02",
+      "reason": ""
+    },
+    {
+      "metric": "peak_gain",
+      "required": "≥5.0 dBi",
+      "measured": "6.5",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "evidence_id": "E04",
+      "reason": "Only directivity reported; gain required."
+    },
+    {
+      "metric": "minimum_s11",
+      "required": "≤-10.0 dB",
+      "measured": "-16.0 dB",
+      "status": "PASS",
+      "evidence_id": "E03",
+      "reason": ""
+    },
+    {
+      "metric": "efficiency",
+      "required": "≥70.0 %",
+      "measured": null,
+      "status": "INSUFFICIENT_EVIDENCE",
+      "evidence_id": null,
+      "reason": "Optional metric not provided."
+    }
+  ],
+  "insufficient_evidence": [
+    "resonant_frequency: Conflicting frequency values across sources.",
+    "peak_gain: Only directivity reported; gain required.",
+    "efficiency: Optional metric not provided."
+  ],
+  "confidence": "medium",
+  "evidence_coverage_percent": 75.0,
+  "rationale": "Review derived from cited evidence only."
+}

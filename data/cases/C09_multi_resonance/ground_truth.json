@@ -1,0 +1,35 @@
+{
+  "case_id": "C09",
+  "overall_verdict": "FAIL",
+  "metrics": [
+    {
+      "metric": "resonant_frequency",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "required": "2.35–2.45 GHz",
+      "measured": 2.39,
+      "reason": "Multiple resonances detected (2)"
+    },
+    {
+      "metric": "bandwidth",
+      "status": "FAIL",
+      "required": "≥100 MHz",
+      "measured": 80.00000000000007,
+      "reason": "Multiple resonances detected (2)"
+    },
+    {
+      "metric": "peak_gain",
+      "status": "PASS",
+      "required": "≥5.0 dBi",
+      "measured": 5.5,
+      "reason": ""
+    },
+    {
+      "metric": "minimum_s11",
+      "status": "PASS",
+      "required": "≤-10.0 dB",
+      "measured": -19.0,
+      "reason": ""
+    }
+  ],
+  "notes": "One or more mandatory metrics failed thresholds"
+}

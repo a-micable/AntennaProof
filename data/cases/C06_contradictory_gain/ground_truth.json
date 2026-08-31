@@ -1,0 +1,35 @@
+{
+  "case_id": "C06",
+  "overall_verdict": "INSUFFICIENT_EVIDENCE",
+  "metrics": [
+    {
+      "metric": "resonant_frequency",
+      "status": "PASS",
+      "required": "2.35–2.45 GHz",
+      "measured": 2.39,
+      "reason": ""
+    },
+    {
+      "metric": "bandwidth",
+      "status": "PASS",
+      "required": "≥100 MHz",
+      "measured": 120.0,
+      "reason": ""
+    },
+    {
+      "metric": "peak_gain",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "required": "≥5.0 dBi",
+      "measured": 4.2,
+      "reason": "Contradiction: notes claim 6.0 dBi vs measurements.json=4.2 dBi"
+    },
+    {
+      "metric": "minimum_s11",
+      "status": "PASS",
+      "required": "≤-10.0 dB",
+      "measured": -17.0,
+      "reason": ""
+    }
+  ],
+  "notes": "One or more mandatory metrics lack sufficient evidence"
+}

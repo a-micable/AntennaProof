@@ -1,0 +1,1 @@
+Measured peak gain approximately 6.0 dBi per anechoic chamber quick test.

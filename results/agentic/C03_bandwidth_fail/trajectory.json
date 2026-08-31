@@ -1,0 +1,260 @@
+{
+  "case_id": "C03",
+  "started_at": "2026-08-31T14:28:09.445192+00:00",
+  "agents": [
+    {
+      "agent": "RequirementsAnalyst",
+      "output": {
+        "case_id": "C03",
+        "design_name": "Bandwidth Failure",
+        "criteria": [
+          {
+            "metric": "resonant_frequency",
+            "description": "Resonant frequency within band",
+            "operator": "in_range",
+            "value": null,
+            "min_value": 2.35,
+            "max_value": 2.45,
+            "unit": "GHz",
+            "mandatory": true
+          },
+          {
+            "metric": "bandwidth",
+            "description": "Impedance bandwidth at S11 threshold",
+            "operator": "gte",
+            "value": 100.0,
+            "min_value": null,
+            "max_value": null,
+            "unit": "MHz",
+            "mandatory": true
+          },
+          {
+            "metric": "peak_gain",
+            "description": "Peak realized gain",
+            "operator": "gte",
+            "value": 5.0,
+            "min_value": null,
+            "max_value": null,
+            "unit": "dBi",
+            "mandatory": true
+          },
+          {
+            "metric": "minimum_s11",
+            "description": "Minimum S11 across band",
+            "operator": "lte",
+            "value": -10.0,
+            "min_value": null,
+            "max_value": null,
+            "unit": "dB",
+            "mandatory": true
+          },
+          {
+            "metric": "efficiency",
+            "description": "Radiation efficiency",
+            "operator": "gte",
+            "value": null,
+            "min_value": null,
+            "max_value": null,
+            "unit": "%",
+            "mandatory": false
+          }
+        ],
+        "mandatory_metrics": [
+          "resonant_frequency",
+          "bandwidth",
+          "peak_gain",
+          "minimum_s11"
+        ],
+        "optional_metrics": [
+          "efficiency"
+        ]
+      }
+    },
+    {
+      "agent": "EvidenceExtractor",
+      "output": [
+        {
+          "evidence_id": "E01",
+          "metric": "resonant_frequency",
+          "value": 2.39,
+          "unit": "GHz",
+          "source": "measurements.json",
+          "quote": "",
+          "confidence": "high"
+        },
+        {
+          "evidence_id": "E02",
+          "metric": "bandwidth",
+          "value": 82.0,
+          "unit": "MHz",
+          "source": "measurements.json",
+          "quote": "",
+          "confidence": "high"
+        },
+        {
+          "evidence_id": "E03",
+          "metric": "peak_gain",
+          "value": 5.7,
+          "unit": "dBi",
+          "source": "measurements.json",
+          "quote": "",
+          "confidence": "high"
+        },
+        {
+          "evidence_id": "E04",
+          "metric": "minimum_s11",
+          "value": -18.2,
+          "unit": "dB",
+          "source": "measurements.json",
+          "quote": "",
+          "confidence": "high"
+        },
+        {
+          "evidence_id": "E05",
+          "metric": "resonant_frequency",
+          "value": 2.39,
+          "unit": "GHz",
+          "source": "s11.csv",
+          "quote": "Computed from S11 minimum",
+          "confidence": "medium"
+        },
+        {
+          "evidence_id": "E06",
+          "metric": "bandwidth",
+          "value": 50.00000000000027,
+          "unit": "MHz",
+          "source": "s11.csv",
+          "quote": "Computed at -10 dB threshold",
+          "confidence": "medium"
+        },
+        {
+          "evidence_id": "E07",
+          "metric": "minimum_s11",
+          "value": -18.2,
+          "unit": "dB",
+          "source": "s11.csv",
+          "quote": "Minimum S11 from sweep",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "agent": "DesignReviewer",
+      "output": {
+        "overall_verdict": "FAIL",
+        "metric_results": [
+          {
+            "metric": "resonant_frequency",
+            "required": "2.35\u20132.45 GHz",
+            "measured": "2.39",
+            "status": "PASS",
+            "evidence_id": "E05",
+            "reason": ""
+          },
+          {
+            "metric": "bandwidth",
+            "required": "\u2265100 MHz",
+            "measured": "82.0",
+            "status": "FAIL",
+            "evidence_id": "E06",
+            "reason": "82 MHz below minimum 100 MHz"
+          },
+          {
+            "metric": "peak_gain",
+            "required": "\u22655.0 dBi",
+            "measured": "5.7",
+            "status": "PASS",
+            "evidence_id": "E03",
+            "reason": ""
+          },
+          {
+            "metric": "minimum_s11",
+            "required": "\u2264-10.0 dB",
+            "measured": "-18.2",
+            "status": "PASS",
+            "evidence_id": "E07",
+            "reason": ""
+          },
+          {
+            "metric": "efficiency",
+            "required": "\u2265?%",
+            "measured": null,
+            "status": "INSUFFICIENT_EVIDENCE",
+            "evidence_id": null,
+            "reason": "Optional metric not provided."
+          }
+        ],
+        "insufficient_evidence": [
+          "efficiency: Optional metric not provided."
+        ],
+        "confidence": "high",
+        "evidence_coverage_percent": 100.0,
+        "rationale": "One or more mandatory metrics failed thresholds"
+      }
+    },
+    {
+      "agent": "Verifier",
+      "output": {
+        "approved": true,
+        "review": {
+          "overall_verdict": "FAIL",
+          "metric_results": [
+            {
+              "metric": "resonant_frequency",
+              "required": "2.35\u20132.45 GHz",
+              "measured": "2.39",
+              "status": "PASS",
+              "evidence_id": "E05",
+              "reason": ""
+            },
+            {
+              "metric": "bandwidth",
+              "required": "\u2265100 MHz",
+              "measured": "82.0",
+              "status": "FAIL",
+              "evidence_id": "E06",
+              "reason": "82 MHz below minimum 100 MHz"
+            },
+            {
+              "metric": "peak_gain",
+              "required": "\u22655.0 dBi",
+              "measured": "5.7",
+              "status": "PASS",
+              "evidence_id": "E03",
+              "reason": ""
+            },
+            {
+              "metric": "minimum_s11",
+              "required": "\u2264-10.0 dB",
+              "measured": "-18.2",
+              "status": "PASS",
+              "evidence_id": "E07",
+              "reason": ""
+            },
+            {
+              "metric": "efficiency",
+              "required": "\u2265?%",
+              "measured": null,
+              "status": "INSUFFICIENT_EVIDENCE",
+              "evidence_id": null,
+              "reason": "Optional metric not provided."
+            }
+          ],
+          "insufficient_evidence": [
+            "efficiency: Optional metric not provided."
+          ],
+          "confidence": "high",
+          "evidence_coverage_percent": 100.0,
+          "rationale": "One or more mandatory metrics failed thresholds"
+        },
+        "violations": []
+      },
+      "retries": 0
+    },
+    {
+      "agent": "ReportAssembler",
+      "output_file": "design_review.md"
+    }
+  ],
+  "final_verdict": "FAIL"
+}

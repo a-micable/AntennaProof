@@ -1,0 +1,1 @@
+Peak gain measured at 6.2 dBi in chamber (not exported to JSON).

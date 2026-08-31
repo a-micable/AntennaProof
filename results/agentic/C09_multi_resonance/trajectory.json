@@ -1,0 +1,63 @@
+{
+  "case_id": "C09",
+  "started_at": "2026-08-31T15:10:04.828732+00:00",
+  "transitions": [
+    {
+      "step": "RequirementsAnalyst",
+      "output": "AcceptanceCriteria compiled"
+    },
+    {
+      "step": "EvidenceExtractor",
+      "phase": 1,
+      "tools_selected": [
+        "read_measurements_json"
+      ],
+      "rationale": "Phase 1: structured simulation exports only.",
+      "evidence_count": 2
+    },
+    {
+      "step": "DesignReviewer",
+      "phase": 1,
+      "proposed_verdict": "INSUFFICIENT_EVIDENCE",
+      "decision_basis": "evidence_items_only"
+    },
+    {
+      "step": "Verifier",
+      "phase": 1,
+      "action": "RETRY_EVIDENCE",
+      "violations": [
+        "Mandatory metrics missing \u2014 invoke S11 tools"
+      ],
+      "approved": false
+    },
+    {
+      "step": "EvidenceExtractor",
+      "phase": 2,
+      "tools_selected": [
+        "read_measurements_json",
+        "analyze_s11_csv",
+        "detect_resonance_count"
+      ],
+      "rationale": "Phase 2: expand to S11 sweep tools after verifier rejection.",
+      "evidence_count": 6
+    },
+    {
+      "step": "DesignReviewer",
+      "phase": 2,
+      "proposed_verdict": "FAIL",
+      "decision_basis": "evidence_items_only"
+    },
+    {
+      "step": "Verifier",
+      "phase": 2,
+      "action": "APPROVE",
+      "violations": [],
+      "approved": true
+    },
+    {
+      "step": "ReportAssembler",
+      "final_verdict": "FAIL"
+    }
+  ],
+  "final_phase": 2
+}

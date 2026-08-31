@@ -1,0 +1,44 @@
+{
+  "overall_verdict": "PASS",
+  "metric_results": [
+    {
+      "metric": "resonant_frequency",
+      "required": "2.35–2.45 GHz",
+      "measured": null,
+      "status": "INSUFFICIENT_EVIDENCE",
+      "evidence_id": null,
+      "reason": "Missing"
+    },
+    {
+      "metric": "bandwidth",
+      "required": "≥100 MHz",
+      "measured": null,
+      "status": "INSUFFICIENT_EVIDENCE",
+      "evidence_id": null,
+      "reason": "Missing"
+    },
+    {
+      "metric": "peak_gain",
+      "required": "≥5.0 dBi",
+      "measured": "5.5 dBi",
+      "status": "PASS",
+      "evidence_id": null,
+      "reason": ""
+    },
+    {
+      "metric": "minimum_s11",
+      "required": "≤-10.0 dB",
+      "measured": "-19.0 dB",
+      "status": "PASS",
+      "evidence_id": null,
+      "reason": ""
+    }
+  ],
+  "insufficient_evidence": [
+    "resonant_frequency: Missing",
+    "bandwidth: Missing"
+  ],
+  "confidence": "medium",
+  "evidence_coverage_percent": 50.0,
+  "rationale": "Baseline single-pass review (no verifier)"
+}

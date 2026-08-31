@@ -1,0 +1,42 @@
+{
+  "case_id": "C01",
+  "overall_verdict": "PASS",
+  "metrics": [
+    {
+      "metric": "resonant_frequency",
+      "status": "PASS",
+      "required": "2.35–2.45 GHz",
+      "measured": 2.39,
+      "reason": ""
+    },
+    {
+      "metric": "bandwidth",
+      "status": "PASS",
+      "required": "≥100 MHz",
+      "measured": 120.0,
+      "reason": ""
+    },
+    {
+      "metric": "peak_gain",
+      "status": "PASS",
+      "required": "≥5.0 dBi",
+      "measured": 5.7,
+      "reason": ""
+    },
+    {
+      "metric": "minimum_s11",
+      "status": "PASS",
+      "required": "≤-10.0 dB",
+      "measured": -18.2,
+      "reason": ""
+    },
+    {
+      "metric": "efficiency",
+      "status": "PASS",
+      "required": "≥70.0%",
+      "measured": 72.0,
+      "reason": ""
+    }
+  ],
+  "notes": "All mandatory metrics pass with sufficient evidence"
+}

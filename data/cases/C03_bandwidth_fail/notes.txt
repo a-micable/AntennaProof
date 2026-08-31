@@ -1,0 +1,1 @@
+Designer notes: bandwidth may be tight at band edges.

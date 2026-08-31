@@ -1,0 +1,1 @@
+Bandwidth simulation shows 99.9 MHz at -10 dB reference.

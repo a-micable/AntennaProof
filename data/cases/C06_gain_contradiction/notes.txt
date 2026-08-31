@@ -1,0 +1,2 @@
+Simulation notes: peak gain is 6.0 dBi per HFSS report header.
+Measurements export may reflect a different port configuration.

@@ -1,0 +1,51 @@
+{
+  "overall_verdict": "FAIL",
+  "metric_results": [
+    {
+      "metric": "resonant_frequency",
+      "required": "2.35–2.45 GHz",
+      "measured": "2.39",
+      "status": "PASS",
+      "evidence_id": "E05",
+      "reason": ""
+    },
+    {
+      "metric": "bandwidth",
+      "required": "≥100 MHz",
+      "measured": "82.0",
+      "status": "FAIL",
+      "evidence_id": "E06",
+      "reason": "82 MHz below minimum 100 MHz"
+    },
+    {
+      "metric": "peak_gain",
+      "required": "≥5.0 dBi",
+      "measured": "5.7",
+      "status": "PASS",
+      "evidence_id": "E03",
+      "reason": ""
+    },
+    {
+      "metric": "minimum_s11",
+      "required": "≤-10.0 dB",
+      "measured": "-18.2",
+      "status": "PASS",
+      "evidence_id": "E07",
+      "reason": ""
+    },
+    {
+      "metric": "efficiency",
+      "required": "≥?%",
+      "measured": null,
+      "status": "INSUFFICIENT_EVIDENCE",
+      "evidence_id": null,
+      "reason": "Optional metric not provided."
+    }
+  ],
+  "insufficient_evidence": [
+    "efficiency: Optional metric not provided."
+  ],
+  "confidence": "high",
+  "evidence_coverage_percent": 100.0,
+  "rationale": "One or more mandatory metrics failed thresholds"
+}

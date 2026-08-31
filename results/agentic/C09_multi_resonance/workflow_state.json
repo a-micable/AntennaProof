@@ -1,0 +1,389 @@
+{
+  "case_id": "C09",
+  "criteria": {
+    "case_id": "C09",
+    "design_name": "Dual-Band Leakage",
+    "criteria": [
+      {
+        "metric": "resonant_frequency",
+        "description": "Resonant frequency within band",
+        "operator": "in_range",
+        "value": null,
+        "min_value": 2.35,
+        "max_value": 2.45,
+        "unit": "GHz",
+        "mandatory": true
+      },
+      {
+        "metric": "bandwidth",
+        "description": "Impedance bandwidth at S11 threshold",
+        "operator": "gte",
+        "value": 100.0,
+        "min_value": null,
+        "max_value": null,
+        "unit": "MHz",
+        "mandatory": true
+      },
+      {
+        "metric": "peak_gain",
+        "description": "Peak realized gain",
+        "operator": "gte",
+        "value": 5.0,
+        "min_value": null,
+        "max_value": null,
+        "unit": "dBi",
+        "mandatory": true
+      },
+      {
+        "metric": "minimum_s11",
+        "description": "Minimum S11 across band",
+        "operator": "lte",
+        "value": -10.0,
+        "min_value": null,
+        "max_value": null,
+        "unit": "dB",
+        "mandatory": true
+      }
+    ],
+    "mandatory_metrics": [
+      "resonant_frequency",
+      "bandwidth",
+      "peak_gain",
+      "minimum_s11"
+    ],
+    "optional_metrics": []
+  },
+  "extraction_phase": 1,
+  "extraction_history": [
+    {
+      "plan": {
+        "phase": 1,
+        "tools_selected": [
+          "read_measurements_json"
+        ],
+        "rationale": "Phase 1: structured simulation exports only."
+      },
+      "evidence": [
+        {
+          "evidence_id": "E01",
+          "metric": "peak_gain",
+          "value": 5.5,
+          "unit": "dBi",
+          "source": "measurements.json",
+          "quote": "tool=read_measurements_json",
+          "confidence": "high"
+        },
+        {
+          "evidence_id": "E02",
+          "metric": "minimum_s11",
+          "value": -19.0,
+          "unit": "dB",
+          "source": "measurements.json",
+          "quote": "tool=read_measurements_json",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "plan": {
+        "phase": 2,
+        "tools_selected": [
+          "read_measurements_json",
+          "analyze_s11_csv",
+          "detect_resonance_count"
+        ],
+        "rationale": "Phase 2: expand to S11 sweep tools after verifier rejection."
+      },
+      "evidence": [
+        {
+          "evidence_id": "E01",
+          "metric": "peak_gain",
+          "value": 5.5,
+          "unit": "dBi",
+          "source": "measurements.json",
+          "quote": "tool=read_measurements_json",
+          "confidence": "high"
+        },
+        {
+          "evidence_id": "E02",
+          "metric": "minimum_s11",
+          "value": -19.0,
+          "unit": "dB",
+          "source": "measurements.json",
+          "quote": "tool=read_measurements_json",
+          "confidence": "high"
+        },
+        {
+          "evidence_id": "E03",
+          "metric": "resonant_frequency",
+          "value": 2.39,
+          "unit": "GHz",
+          "source": "s11.csv",
+          "quote": "S11 minimum",
+          "confidence": "medium"
+        },
+        {
+          "evidence_id": "E04",
+          "metric": "bandwidth",
+          "value": 80.00000000000007,
+          "unit": "MHz",
+          "source": "s11.csv",
+          "quote": "At -10 dB threshold",
+          "confidence": "medium"
+        },
+        {
+          "evidence_id": "E05",
+          "metric": "minimum_s11",
+          "value": -19.0,
+          "unit": "dB",
+          "source": "s11.csv",
+          "quote": "Sweep minimum",
+          "confidence": "medium"
+        },
+        {
+          "evidence_id": "E06",
+          "metric": "resonance_count",
+          "value": 2.0,
+          "unit": "count",
+          "source": "s11.csv",
+          "quote": "Multiple resonances detected (2)",
+          "confidence": "medium"
+        }
+      ]
+    }
+  ],
+  "proposed_review": {
+    "overall_verdict": "FAIL",
+    "metric_results": [
+      {
+        "metric": "resonant_frequency",
+        "required": "2.35–2.45 GHz",
+        "measured": "2.39",
+        "status": "INSUFFICIENT_EVIDENCE",
+        "evidence_id": "E06",
+        "reason": "Multiple resonances detected (2)"
+      },
+      {
+        "metric": "bandwidth",
+        "required": "≥100.0 MHz",
+        "measured": "80.00000000000007 MHz",
+        "status": "FAIL",
+        "evidence_id": "E04",
+        "reason": "Multiple resonances detected (2)"
+      },
+      {
+        "metric": "peak_gain",
+        "required": "≥5.0 dBi",
+        "measured": "5.5 dBi",
+        "status": "PASS",
+        "evidence_id": "E01",
+        "reason": ""
+      },
+      {
+        "metric": "minimum_s11",
+        "required": "≤-10.0 dB",
+        "measured": "-19.0 dB",
+        "status": "PASS",
+        "evidence_id": "E02",
+        "reason": ""
+      }
+    ],
+    "insufficient_evidence": [
+      "resonant_frequency: Multiple resonances detected (2)"
+    ],
+    "confidence": "high",
+    "evidence_coverage_percent": 100.0,
+    "rationale": "Review derived from cited evidence only."
+  },
+  "verifier_decisions": [
+    {
+      "action": "RETRY_EVIDENCE",
+      "approved": false,
+      "review": {
+        "overall_verdict": "INSUFFICIENT_EVIDENCE",
+        "metric_results": [
+          {
+            "metric": "resonant_frequency",
+            "required": "2.35–2.45 GHz",
+            "measured": null,
+            "status": "INSUFFICIENT_EVIDENCE",
+            "evidence_id": null,
+            "reason": "No frequency evidence."
+          },
+          {
+            "metric": "bandwidth",
+            "required": "≥100.0 MHz",
+            "measured": null,
+            "status": "INSUFFICIENT_EVIDENCE",
+            "evidence_id": null,
+            "reason": "No bandwidth evidence."
+          },
+          {
+            "metric": "peak_gain",
+            "required": "≥5.0 dBi",
+            "measured": "5.5 dBi",
+            "status": "PASS",
+            "evidence_id": "E01",
+            "reason": ""
+          },
+          {
+            "metric": "minimum_s11",
+            "required": "≤-10.0 dB",
+            "measured": "-19.0 dB",
+            "status": "PASS",
+            "evidence_id": "E02",
+            "reason": ""
+          }
+        ],
+        "insufficient_evidence": [
+          "resonant_frequency: No frequency evidence.",
+          "bandwidth: No bandwidth evidence."
+        ],
+        "confidence": "medium",
+        "evidence_coverage_percent": 50.0,
+        "rationale": "Review derived from cited evidence only."
+      },
+      "violations": [
+        "Mandatory metrics missing — invoke S11 tools"
+      ]
+    },
+    {
+      "action": "APPROVE",
+      "approved": true,
+      "review": {
+        "overall_verdict": "FAIL",
+        "metric_results": [
+          {
+            "metric": "resonant_frequency",
+            "required": "2.35–2.45 GHz",
+            "measured": "2.39",
+            "status": "INSUFFICIENT_EVIDENCE",
+            "evidence_id": "E06",
+            "reason": "Multiple resonances detected (2)"
+          },
+          {
+            "metric": "bandwidth",
+            "required": "≥100.0 MHz",
+            "measured": "80.00000000000007 MHz",
+            "status": "FAIL",
+            "evidence_id": "E04",
+            "reason": "Multiple resonances detected (2)"
+          },
+          {
+            "metric": "peak_gain",
+            "required": "≥5.0 dBi",
+            "measured": "5.5 dBi",
+            "status": "PASS",
+            "evidence_id": "E01",
+            "reason": ""
+          },
+          {
+            "metric": "minimum_s11",
+            "required": "≤-10.0 dB",
+            "measured": "-19.0 dB",
+            "status": "PASS",
+            "evidence_id": "E02",
+            "reason": ""
+          }
+        ],
+        "insufficient_evidence": [
+          "resonant_frequency: Multiple resonances detected (2)"
+        ],
+        "confidence": "high",
+        "evidence_coverage_percent": 100.0,
+        "rationale": "Review derived from cited evidence only."
+      },
+      "violations": []
+    }
+  ],
+  "final_review": {
+    "overall_verdict": "FAIL",
+    "metric_results": [
+      {
+        "metric": "resonant_frequency",
+        "required": "2.35–2.45 GHz",
+        "measured": "2.39",
+        "status": "INSUFFICIENT_EVIDENCE",
+        "evidence_id": "E06",
+        "reason": "Multiple resonances detected (2)"
+      },
+      {
+        "metric": "bandwidth",
+        "required": "≥100.0 MHz",
+        "measured": "80.00000000000007 MHz",
+        "status": "FAIL",
+        "evidence_id": "E04",
+        "reason": "Multiple resonances detected (2)"
+      },
+      {
+        "metric": "peak_gain",
+        "required": "≥5.0 dBi",
+        "measured": "5.5 dBi",
+        "status": "PASS",
+        "evidence_id": "E01",
+        "reason": ""
+      },
+      {
+        "metric": "minimum_s11",
+        "required": "≤-10.0 dB",
+        "measured": "-19.0 dB",
+        "status": "PASS",
+        "evidence_id": "E02",
+        "reason": ""
+      }
+    ],
+    "insufficient_evidence": [
+      "resonant_frequency: Multiple resonances detected (2)"
+    ],
+    "confidence": "high",
+    "evidence_coverage_percent": 100.0,
+    "rationale": "Review derived from cited evidence only."
+  },
+  "verified": {
+    "approved": true,
+    "review": {
+      "overall_verdict": "FAIL",
+      "metric_results": [
+        {
+          "metric": "resonant_frequency",
+          "required": "2.35–2.45 GHz",
+          "measured": "2.39",
+          "status": "INSUFFICIENT_EVIDENCE",
+          "evidence_id": "E06",
+          "reason": "Multiple resonances detected (2)"
+        },
+        {
+          "metric": "bandwidth",
+          "required": "≥100.0 MHz",
+          "measured": "80.00000000000007 MHz",
+          "status": "FAIL",
+          "evidence_id": "E04",
+          "reason": "Multiple resonances detected (2)"
+        },
+        {
+          "metric": "peak_gain",
+          "required": "≥5.0 dBi",
+          "measured": "5.5 dBi",
+          "status": "PASS",
+          "evidence_id": "E01",
+          "reason": ""
+        },
+        {
+          "metric": "minimum_s11",
+          "required": "≤-10.0 dB",
+          "measured": "-19.0 dB",
+          "status": "PASS",
+          "evidence_id": "E02",
+          "reason": ""
+        }
+      ],
+      "insufficient_evidence": [
+        "resonant_frequency: Multiple resonances detected (2)"
+      ],
+      "confidence": "high",
+      "evidence_coverage_percent": 100.0,
+      "rationale": "Review derived from cited evidence only."
+    },
+    "violations": []
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "case_id": "C05",
+  "overall_verdict": "INSUFFICIENT_EVIDENCE",
+  "metrics": [
+    {
+      "metric": "resonant_frequency",
+      "status": "PASS",
+      "required": "2.35–2.45 GHz",
+      "measured": 2.39,
+      "reason": ""
+    },
+    {
+      "metric": "bandwidth",
+      "status": "PASS",
+      "required": "≥100 MHz",
+      "measured": 115.0,
+      "reason": ""
+    },
+    {
+      "metric": "peak_gain",
+      "status": "PASS",
+      "required": "≥5.0 dBi",
+      "measured": 5.8,
+      "reason": ""
+    },
+    {
+      "metric": "minimum_s11",
+      "status": "PASS",
+      "required": "≤-10.0 dB",
+      "measured": -17.0,
+      "reason": ""
+    },
+    {
+      "metric": "efficiency",
+      "status": "INSUFFICIENT_EVIDENCE",
+      "required": "≥70.0%",
+      "measured": null,
+      "reason": "No evidence for efficiency in c05"
+    }
+  ],
+  "notes": "One or more mandatory metrics lack sufficient evidence"
+}
